@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Laboratório Autenticação</title>
+    
+</head>
+<body>
+    
+    <div>
+        @RenderBody()
+    </div>
+        
+    @if (ViewBag.IsIntranetUser != null)
+    {
+        <p>
+            @(ViewBag.IsIntranetUser ? "(intranet)" : "(extranet)")
+        </p>
+    }
+
+</body>
+</html>

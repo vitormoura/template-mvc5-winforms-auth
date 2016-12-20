@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bem vindo </h2>
+
+<p>Página de acesso principal (Usuario: @User.Identity.Name, AuthType: @User.Identity.AuthenticationType)</p>
+
+<ul>
+    <li>@Html.ActionLink("[DOCS]", "Index", "Documentos")</li>
+    <li>@Html.ActionLink("[Sair]", "Sair", "Usuarios")</li>
+</ul>

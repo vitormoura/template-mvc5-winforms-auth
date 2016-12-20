@@ -1,0 +1,31 @@
+﻿@model LabAutenticacao.Models.FormLogin
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<form action="@Model.LoginURL" method="post">
+
+    <p>
+        <label>Usuário:</label>
+        @Html.TextBoxFor(x => x.Usuario)
+    </p>
+
+    <p>
+        <label>Senha:</label>
+        @Html.PasswordFor(x => x.Senha)
+    </p>
+
+    <p>
+        <input type="submit" value="Enviar" />
+    </p>
+    
+    <p>@Model.Mensagem</p>
+    
+    
+    <hr />
+    
+    <p>@Html.ActionLink("Quer ajuda?", "Index", "Ajuda")</p>
+
+</form>
